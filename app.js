@@ -11,6 +11,7 @@ var firstReading = document.getElementById("first-reading");
 var psalm = document.getElementById("psalm");
 var secondReading = document.getElementById("second-reading");
 var gospel = document.getElementById("gospel");
+var psalmCheck = document.getElementById("psalm-check");
 
 
 
@@ -49,7 +50,12 @@ function psalmify(substring) {//takes a psalm and formats it for congregational 
 	var array = psalmString.split(/\d+/g);
 	for (var i = 1; i < array.length; i++) {
 		if (i%2 !== 0) {
-			outputString = outputString + "<div>P: " + array[i] + "</div>";
+			if (psalmCheck.checked == false) {//psalm should not be singable
+				outputString = outputString + "<div>P: " + array[i] + "</div>";
+			}else{//psalm should be singable
+				outputString = outputString + "<div>L: " + array[i] + "</div>";
+			}
+			
 		} else {
 			outputString = outputString + "<strong>C: " + array[i] + "</strong>";
 		}
@@ -65,7 +71,9 @@ function parse() {
 	prayerOfTheDay.innerHTML = getSubset("Prayer of the Day", "Amen.") + "<strong>Amen.</strong>";
 	firstReading.innerHTML = readingify(getSubset("First Reading:", "Psalm:"));
 	var psalmText = getSubset("Psalm:", "Second Reading:");
-	psalmText = psalmText.replace(/\|/g, "");//removes |'s from psalm
+	if (psalmCheck.checked == false) {//psalm should not be singable
+		psalmText = psalmText.replace(/\|/g, "");//removes |'s from psalm
+	}
 	//TODO: The following DON'T WORK because replace() only replaces the first occurance of a string.
 	//you will need to figure out REGEX for these next two:
 	psalmText = psalmText.replace(/(\-\s*)/g, "");//removes - between syllables
