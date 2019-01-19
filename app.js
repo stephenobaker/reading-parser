@@ -80,7 +80,7 @@ function parse() {
 	psalmText = psalmText.replace(/\.\sR/g, ".");//removes R for refrains (hopefully not beginning of sentences because those have number before)
 	psalm.innerHTML = psalmify(psalmText);
 	secondReading.innerHTML = readingify(getSubset("Second Reading:", "Gospel:"));
-	gospel.innerHTML = readingify(getSubset("Gospel:", "Semicontinuous First Reading:"));
+	gospel.innerHTML = readingify(getSubset("Gospel:", "Prayers of Intercession")); //this used to be "Semicontinuous First Reading:"
 	//experiment:
 	var experimentString = getSubset("First Reading:", "Psalm:");
 	//console.log(experimentString);//works
