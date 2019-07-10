@@ -1,4 +1,3 @@
-<!-- Reading Parser -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,31 +8,54 @@
 <body>
 	<div class="navbar">
 		<div class="title">Lectionary Readings Parser</div>
-	
-	<a href="https://github.com/you"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full github" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+		<a href="https://github.com/stephenobaker/reading-parser"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full github" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+	</div>
+
+	<div class="explainer-padding">
+		<div class="explainer" id="explainer-section">
+			<h2>About:</h2>
+			<br>
+			<p>When Sundays and Seasons displays lectionary readings, it makes the verse numbers tiny superscript in a light-colored font. But when you copy the text and paste it into a bulletin, PowerPoint slide, or music leader's folio, the verse numbers become full font, <strong>rendering4 text that5 looks6 like this7a.</strong></p>
+			<br>
+			<p>This application will parse text copied from the <em>Sundays and Seasons</em> "Readings in Full" page for a single Sunday. It will output a formatted group including the Prayer of the Day, the First Reading, the Psalm (either chanted or spoken, depending on your choice), the Second Reading, and the Gospel. It removes verse numbers and checks, making it more easily readable by liturgists and better for powerpoint presentations.</p>
+			<br>
+			<h2>Instructions:</h2>
+			<br>
+			<p>Go to <a href="https://www.sundaysandseasons.com">sundaysandseasons.com</a> and sign up or sign in to your account. Use the calendar to navigate to the Sunday you wish to extract texts from, and click "Day Texts," and "Read in Full." Then select all the windows content using Ctrl-A, copy it using Ctrl-C, and then navigate to this page and use Ctrl-V to paste it into the input box. "Psalm is chanted" is selected by default; deselect it if you want the parser to remove the flexas. Select "Sunday in Pentecost" if this Sunday is between Trinity Sunday and the first Sunday of Advent (S&S changes the way they display readings during that time and it causes the parser to add extra text if you don't check it then). Finally, make sure you put the required Sundays and Seasons license number and copyright notice on any documents you prepare using this output.</p>
+			<br>
+			<div class="input-container">
+				<div><h3>Paste raw text here:</h3> <input id="input"></div>
+				<div><input id="psalm-check" type="checkbox" checked> Make Psalm Chanted</div>
+				<div><input id="pentecost-check" type="checkbox"> Sunday is between Trinity and Advent</div>	
+			</div>
+			<div class="flex"><button id="parse">Parse text</button></div>
+			
+		</div>
 	</div>
 
 	<div class="mid-section">
-		<div>
-			<input id="input">
-			<button id="parse">Parse</button>
-			<input id="psalm-check" type="checkbox" checked>Make Psalm Chanted
-			<input id="pentecost-check" type="checkbox">Check if readings are for a Sunday beginning with Pentecost and ending with Christ the King
-		</div>
-
 		<div id="output-section" class="hidden">
 			<h1>Prayer of the Day</h1>
 			<div id="prayer-day">Prayer of the Day</div>
+			<br>
 			<h1>First Reading</h1>
 			<div id="first-reading">First Reading</div>
+			<br>
 			<h1>Psalm</h1>
 			<div id="psalm">Psalm</div>
+			<br>
 			<h1>Second Reading</h1>
 			<div id="second-reading">Second Reading</div>
+			<br>
 			<h1>Gospel</h1>
 			<div id="gospel">Gospel</div>
+			<div class="flex">
+				<button id="go-back">Go back</button>
+			</div>
 		</div>
+		
 	</div>
+
 
 	<div class="bottom-banner">
 	</div>

@@ -4,18 +4,28 @@
 
 var input = document.getElementById("input");
 var parseButton = document.getElementById("parse");
+var backButton = document.getElementById("go-back");
 var prayerOfTheDay = document.getElementById("prayer-day");
 var firstReading = document.getElementById("first-reading");
 var psalm = document.getElementById("psalm");
 var secondReading = document.getElementById("second-reading");
 var gospel = document.getElementById("gospel");
 var psalmCheck = document.getElementById("psalm-check");
+var pentecostCheck = document.getElementById("pentecost-check");
+var explainerSection = document.getElementById("explainer-section");
 var outputSection = document.getElementById("output-section");
 
 
 
 //event listener for parse button
 parseButton.addEventListener('click', parse, false);
+
+backButton.addEventListener('click', goBack, false);
+
+function goBack() {
+	explainerSection.classList.remove("hidden");
+	outputSection.classList.add("hidden");
+}
 
 //start and stop are strings at the beginning and end (inclusive) that bookend the subset you're looking for
 function getSubset(start, stop) {
@@ -79,12 +89,23 @@ function parse() {
 	psalmText = psalmText.replace(/\.\sR/g, ".");//removes R for refrains (hopefully not beginning of sentences because those have number before)
 	psalm.innerHTML = psalmify(psalmText);
 	secondReading.innerHTML = readingify(getSubset("Second Reading:", "Gospel:"));
-	gospel.innerHTML = readingify(getSubset("Gospel:", "Prayers of Intercession")); //this used to be "Semicontinuous First Reading:"
+	
+	var gospelEnd;
+	if (pentecostCheck.checked == true) {
+		gospelEnd = "Semicontinuous First Reading";
+	} else {
+		gospelEnd = "Prayers of Intercession";
+	}
+
+
+
+	gospel.innerHTML = readingify(getSubset("Gospel:", gospelEnd)); //this used to be "Semicontinuous First Reading:"
 	//experiment:
 	//var experimentString = getSubset("First Reading:", "Psalm:");
 	//console.log(experimentString);//works
 	//var startPoint = experimentString.search(/\d(?=[a-zA-Z])/);
 	//var expSub = experimentString.substring(startPoint, startPoint + 30);
+	explainerSection.classList.add("hidden");
 	outputSection.classList.remove("hidden");
 
 

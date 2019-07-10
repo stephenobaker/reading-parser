@@ -3,9 +3,7 @@
 	padding: 0;
 }
 
-body {
-	background-color: saddlebrown;
-}
+
 
 .navbar {
 	height: 60px;
@@ -28,6 +26,19 @@ body {
 	margin: auto auto auto 20px;
 }
 
+.explainer {
+	border-style: solid;
+	border-radius: 20px;
+	border-color: saddlebrown;
+	margin: 20px auto;
+	padding: 20px;
+	max-width: 600px;
+}
+
+.explainer-padding {
+	padding: 20px 50px;
+}
+
 @media only screen and (max-width: 600px) {
 	.title {
 		font-size: 20px;
@@ -37,10 +48,43 @@ body {
 	.github {
 		display: none;
 	}
+
+	.explainer-padding {
+		padding: 0 10px;
+	}
+}
+
+.input-container {
+	background-color: blue;
+	border-radius: 20px;
+	color: white;
+	padding: 20px;
+}
+
+.flex {
+	display: flex;
+}
+
+button {
+	background-color: blue;
+	color: white;
+	padding: 10px;
+	margin: 10px auto;
+	font-size: 20px;
+	border-radius: 5px;
+}
+
+#input {
+	width: 100%;
+	height: 20px;
+	margin: 10px 0;
 }
 
 .mid-section {
 	background-color: white;
+	margin: 20px auto;
+	padding: 30px;
+	max-width: 800px;
 }
 
 .hidden {
