@@ -3,6 +3,10 @@
 	padding: 0;
 }
 
+body {
+	background-color: saddlebrown;
+}
+
 .navbar {
 	height: 60px;
 	background-color: saddlebrown;
@@ -33,4 +37,17 @@
 	.github {
 		display: none;
 	}
+}
+
+.mid-section {
+	background-color: white;
+}
+
+.hidden {
+	display: none;
+}
+
+.bottom-banner {
+	background-color: saddlebrown;
+	height: 100px;
 }

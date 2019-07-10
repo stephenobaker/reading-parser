@@ -13,23 +13,31 @@
 	<a href="https://github.com/you"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full github" alt="Fork me on GitHub" data-recalc-dims="1"></a>
 	</div>
 
-	<div>
-		<input id="input">
-		<button id="parse">Parse</button>
-		<input id="psalm-check" type="checkbox" checked>Make Psalm Chanted
-		<input id="pentecost-check" type="checkbox">Check if readings are for a Sunday beginning with Pentecost and ending with Christ the King
+	<div class="mid-section">
+		<div>
+			<input id="input">
+			<button id="parse">Parse</button>
+			<input id="psalm-check" type="checkbox" checked>Make Psalm Chanted
+			<input id="pentecost-check" type="checkbox">Check if readings are for a Sunday beginning with Pentecost and ending with Christ the King
+		</div>
+
+		<div id="output-section" class="hidden">
+			<h1>Prayer of the Day</h1>
+			<div id="prayer-day">Prayer of the Day</div>
+			<h1>First Reading</h1>
+			<div id="first-reading">First Reading</div>
+			<h1>Psalm</h1>
+			<div id="psalm">Psalm</div>
+			<h1>Second Reading</h1>
+			<div id="second-reading">Second Reading</div>
+			<h1>Gospel</h1>
+			<div id="gospel">Gospel</div>
+		</div>
 	</div>
 
-	<h1>Prayer of the Day</h1>
-	<div id="prayer-day">Prayer of the Day</div>
-	<h1>First Reading</h1>
-	<div id="first-reading">First Reading</div>
-	<h1>Psalm</h1>
-	<div id="psalm">Psalm</div>
-	<h1>Second Reading</h1>
-	<div id="second-reading">Second Reading</div>
-	<h1>Gospel</h1>
-	<div id="gospel">Gospel</div>
+	<div class="bottom-banner">
+	</div>
+
 	<script src="app.js"></script>
 </body>
 </html>
