@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+	height: 60px;
+	background-color: saddlebrown;
+	color: yellow;
+	display: flex;
+}
+
+.github {
+	float: right;
+	top: 0;
+}
+
+.title {
+	font-size: 30px;
+	background: -webkit-linear-gradient(white, gold);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: papyrus;
+	margin: auto auto auto 20px;
+}
