@@ -13,15 +13,34 @@
 
 	<div class="explainer-padding">
 		<div class="explainer" id="explainer-section">
-			<h2>About:</h2>
+			<h2>This app takes readings like this:</h2>
+			<blockquote>
+				<sup>1</sup>You are to be praised, O | God, in Zion;<br>
+				&nbsp; to you shall vows | be fulfilled.<br>
+				<sup>2</sup><strong>To you, the one | who answers prayer,<br>
+				&nbsp; to you all | flesh shall come.</strong><br>
+				<sup>3</sup>Our sins are stronger | than we are,<br>
+				&nbsp; but you blot out | our transgressions.<br>
+			</blockquote>
 			<br>
-			<p>When Sundays and Seasons displays lectionary readings, it makes the verse numbers tiny superscript in a light-colored font. But when you copy the text and paste it into a bulletin, PowerPoint slide, or music leader's folio, the verse numbers become full font, <strong>rendering4 text that5 looks6 like this7a.</strong></p>
+			<h2>And converts them into this:</h2>
+			<blockquote>
+				L: You are to be praised, O God, in Zion; to you shall vows be fulfilled.<br>
+				<strong>C: To you, the one who answers prayer, to you all flesh shall come.</strong><br>
+				L: Our sins are stronger than we are, but you blot out our transgressions.<br>
+			</blockquote>
 			<br>
-			<p>This application will parse text copied from the <em>Sundays and Seasons</em> "Readings in Full" page for a single Sunday. It will output a formatted group including the Prayer of the Day, the First Reading, the Psalm (either chanted or spoken, depending on your choice), the Second Reading, and the Gospel. It removes verse numbers and checks, making it more easily readable by liturgists and better for powerpoint presentations.</p>
 			<br>
-			<h2>Instructions:</h2>
-			<br>
-			<p>Go to <a href="https://www.sundaysandseasons.com">sundaysandseasons.com</a> and sign up or sign in to your account. Use the calendar to navigate to the Sunday you wish to extract texts from, and click "Day Texts," and "Read in Full." Then select all the windows content using Ctrl-A, copy it using Ctrl-C, and then navigate to this page and use Ctrl-V to paste it into the input box. "Psalm is chanted" is selected by default; deselect it if you want the parser to remove the flexas. Select "Sunday in Pentecost" if this Sunday is between Trinity Sunday and the first Sunday of Advent (S&S changes the way they display readings during that time and it causes the parser to add extra text if you don't check it then). Finally, make sure you put the required Sundays and Seasons license number and copyright notice on any documents you prepare using this output.</p>
+			<h3>Instructions:</h3>
+			<p>It is currently configured to adapt Sunday lectionaries only from <a href="https://www.sundaysandseasons.com">sundaysandseasons.com</a>. You must be a subscriber in order to use Sundays and Seasons. To quickly extract lectionary readings and convert them, follow the instructions below.</p>
+			<ol>
+				<li>Sign up or sign in to Sundays and Seasons</li>
+				<li>Click "Day Texts"</li>
+				<li>Click "Read in Full"</li>
+				<li>Select all text on the page (ctrl-A)</li>
+				<li>Copy text (ctrl-C)</li>
+				<li>Paste text into input field (ctrl-V)</li>
+			</ol>
 			<br>
 			<div class="input-container">
 				<div><h3>Paste raw text here:</h3> <input id="input"></div>

@@ -39,6 +39,19 @@
 	padding: 20px 50px;
 }
 
+sup {
+	font-size: 0.5em;
+	color: gray;
+}
+
+blockquote {
+	margin: 10px;
+}
+
+ol {
+	margin: 10px 30px;
+}
+
 @media (max-width: 400px) {
 
 	.github {
