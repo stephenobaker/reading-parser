@@ -6,15 +6,16 @@
 
 
 .navbar {
-	height: 60px;
+	min-height: 60px;
 	background-color: saddlebrown;
 	color: yellow;
 	display: flex;
 }
 
 .github {
-	float: right;
+	position: fixed;
 	top: 0;
+	right: 0;
 }
 
 .title {
@@ -22,7 +23,6 @@
 	background: -webkit-linear-gradient(white, gold);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	font-family: papyrus;
 	margin: auto auto auto 20px;
 }
 
@@ -39,11 +39,7 @@
 	padding: 20px 50px;
 }
 
-@media only screen and (max-width: 600px) {
-	.title {
-		font-size: 20px;
-		margin: auto;
-	}
+@media (max-width: 400px) {
 
 	.github {
 		display: none;
