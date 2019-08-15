@@ -1,3 +1,10 @@
+/**
+* 
+* LECTIONARY READINGS PARSER
+* 
+*
+*/
+
 //TODO: Make the following as pull requests/bug reports on Github
 //TODO: words starting with lowercase 'a' after a number are removed, such as '1and'. Fix this.
 //TODO: feature add: checkbox option to have Psalm chantable
